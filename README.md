@@ -10,9 +10,9 @@
 
 <h3 align="left">Featured Projects:</h3>
 
-- 🏠 **[Kubernetes Homelab](LINK_HOMELAB):** A production-grade bare-metal cluster with **K3s**, **Flux CD**, **Cilium (eBPF)** and **Ansible**.
-- 🔄 **[ReTOSCA](LINK_RETOSCA):** Reverse-engineering AWS Terraform to TOSCA 2.0 using **GenAI (RAG)** & **Go**.
-- 🧠 **[CodeSmile](LINK_CODESMILE):** Distributed ML microservices with **FastAPI**, **Docker** & **LLMs**.
+- 🏠 **[Kubernetes Homelab](https://github.com/xDaryamo/homelab):** A production-grade bare-metal cluster with **K3s**, **Flux CD**, **Cilium (eBPF)** and **Ansible**.
+- 🔄 **ReTOSCA:** Reverse-engineering AWS Terraform to TOSCA 2.0 using **GenAI (RAG)** & **Go**. (Repo private for paper publication)
+- 🧠 **[CodeSmile](https://github.com/xDaryamo/smell_ai):** Distributed ML microservices with **FastAPI**, **Docker** & **LLMs**.
 
 <h3 align="left">Open Source Highlight</h3>
 <p align="left">
