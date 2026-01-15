@@ -5,7 +5,7 @@
 
 - ☁️ focusing on **kubernetes**, **sre**, **gitops**, and **infrastructure as code**
 
-- 👨‍💻 take a look at my [website](https://dariomazza.net)
+- 👨‍💻 take a look at my [website](https://dariomazza.net) (self-hosted on my homelab!)
 
 
 <h3 align="left">Featured Projects:</h3>
