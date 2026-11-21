@@ -1,79 +1,30 @@
-<h1 align="left">Hi 👋, I'm Dario</h1>
-<h3 align="left">Aspiring Cloud-Native Engineer from Italy ☁️</h3>
+# Dario Mazza
 
-- 📚 new graduate in computer science @[UniSA](https://www.unisa.it)
+Junior cloud and DevSecOps engineer at [Seacom](https://www.seacom.it), based in Italy. Computer science graduate from the University of Salerno.
 
-- ☁️ focusing on **kubernetes**, **sre**, **gitops**, and **infrastructure as code**
+Outside work I run a three-node Kubernetes cluster at home, and my site [dariomazza.net](https://dariomazza.net) is served from it.
 
-- 👨‍💻 take a look at my [website](https://dariomazza.net) (self-hosted on my homelab!)
+## Homelab
 
----
+[homelab](https://github.com/xDaryamo/homelab) is three Dell Optiplex mini PCs running K3s on Debian, with no hypervisor. Flux deploys everything from Git. Terraform and Ansible set up the Azure side and the nodes.
 
-### 🚀 Featured Projects
+- Secrets live in Azure Key Vault and reach the cluster through External Secrets. No secret values in Git.
+- Public services go through a Cloudflare Tunnel, so no ports are open on the router. Admin tools are reachable only from the LAN or Tailscale, some behind OAuth2 Proxy with Entra ID.
+- Renovate opens dependency PRs, and CI builds every kustomization before merge.
+- Longhorn volumes back up to Azure Blob Storage.
 
-- 🏠 **[Hybrid Bare-Metal Homelab](https://github.com/xDaryamo/homelab):** A production-grade infrastructure designed for resilience and security.
-  - **Hybrid Infrastructure:** Engineered a platform combining bare-metal nodes and **Azure** resources via **Terraform** and **Ansible**, managed through a **Flux CD** GitOps workflow.
-  - **Disaster Recovery:** Automated business continuity using **Azure Blob Storage** for off-site backups and **Longhorn** for persistent storage management.
-  - **Zero Trust Security:** Enforced security by integrating **Microsoft Entra ID (OIDC)** and **Azure Key Vault** (via External Secrets) for centralized RBAC and secret management.
-- ☁️ **[AWS Learning Path - Project Collection](https://github.com/xDaryamo/aws-cloud-solutions-portfolio):** A curated collection of hands-on projects for mastering AWS. Covers **Serverless** (Lambda), **EC2**, **Relational (RDS)** and **NoSQL (DynamoDB)** databases, and **AI/ML** service integrations.
-- 🔄 **ReTOSCA:** A framework for reverse-engineering AWS Terraform into TOSCA 2.0 standards using **RAG (AI)** and **Go**.
-- 🧠 **[CodeSmile](https://github.com/xDaryamo/smell_ai):** Distributed microservices for ML-driven code analysis.
+The repo README also lists what doesn't work yet: a single control plane, backups that aren't 3-2-1, and Ingress NGINX that still needs replacing.
 
-### 🌟 Open Source Highlight: TOSCA 2.0 Compliance
-I implemented full **TOSCA 2.0** support for the [**go-puccini**](https://github.com/tliron/go-puccini) compiler.
-- **Impact:** Enabled translation of the newest TOSCA standards into Kubernetes and Terraform configurations.
-- **PR:** [#149](https://github.com/tliron/go-puccini/pull/149) (Merged)
+## Other work
 
----
+- **[go-puccini](https://github.com/tliron/go-puccini):** I contributed TOSCA 2.0 support to the Go version of the Puccini compiler. [PR #149](https://github.com/tliron/go-puccini/pull/149), merged.
+- **ReTOSCA:** my thesis, a proof of concept for a conversion tool that turns AWS Terraform into TOSCA 2.0 models. Written in Go, with an LLM helping on the mapping.
+- **[aws-cloud-solutions-portfolio](https://github.com/xDaryamo/aws-cloud-solutions-portfolio):** a small library of AWS exercises in Terraform. Each one tries out a set of services (Lambda, RDS, DynamoDB, EC2 and others) inside a realistic scenario.
 
-### 🛠️ Tech Stack & Tools
+## Tools
 
-**Programming Languages**
-<p>
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C" />
-  <img src="https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-</p>
+Kubernetes, Flux, Helm, Cilium, Terraform, Ansible, Docker, GitHub Actions, Prometheus, Grafana, Azure, AWS. Go, Python and Bash.
 
-**Cloud & DevOps**
-<p>
-  <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
-  <img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" />
-  <img src="https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitOps-%23011F4B.svg?style=for-the-badge&logo=flux&logoColor=white" alt="GitOps" />
-  <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/helm-%230F1689.svg?style=for-the-badge&logo=helm&logoColor=white" alt="Helm" />
-</p>
+## Contact
 
-**Web Frameworks**
-<p>
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white" alt="Astro" />
-  <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-</p>
-
-**Data & Tools**
-<p>
-  <img src="https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white" alt="Prometheus" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/SonarQube-black?style=for-the-badge&logo=sonarqube&logoColor=4E9BCD" alt="SonarCloud/Qube" />
-</p>
-
----
-
-### 📫 Connect with me
-<p>
-  <a href="https://linkedin.com/in/dario-mazza" target="blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:dariomazza24@gmail.com" target="blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</p>
+[LinkedIn](https://linkedin.com/in/dario-mazza) · [dariomazza24@gmail.com](mailto:dariomazza24@gmail.com)
